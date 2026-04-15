@@ -1,0 +1,56 @@
+body { margin: 0; font-family: sans-serif; background-color: #f0f2f5; }
+.screen { display: none; padding: 15px; min-height: 100vh; box-sizing: border-box; }
+.active { display: flex; flex-direction: column; align-items: center; }
+
+#splash { background: url('fundo_azul_amarelo.png') no-repeat center center; background-size: cover; justify-content: center; color: white; text-align: center; }
+.logo { width: 140px; margin: 20px 0; }
+.title-top, .title-bottom { font-size: 1.4rem; font-weight: bold; text-shadow: 1px 1px 3px black; }
+
+.input-group, .import-area, .config { background: white; padding: 12px; border-radius: 8px; width: 100%; max-width: 450px; margin-bottom: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.positions { margin: 8px 0; display: flex; justify-content: space-around; font-weight: bold; }
+
+#player-list { width: 100%; max-width: 450px; padding: 0; }
+#player-list li { 
+    background: white; margin-bottom: 5px; padding: 10px; border-radius: 5px; 
+    display: flex; justify-content: space-between; align-items: center; border-left: 5px solid #ffcc00;
+}
+
+.btn-c-toggle { background: #eee; border: 1px solid #ccc; margin-right: 5px; border-radius: 4px; padding: 5px 8px; }
+.btn-c-active { background: #ffcc00; border-color: #ccaa00; font-weight: bold; }
+
+.btn-move { background: #f0f0f0; border: 1px solid #ddd; padding: 5px 8px; margin: 0 2px; border-radius: 3px; }
+.btn-del { background: #ff4d4d; color: white; border: none; padding: 5px 10px; border-radius: 3px; }
+.btn-draw { width: 100%; max-width: 450px; padding: 15px; background: #004a99; color: white; font-size: 1.2rem; font-weight: bold; margin-top: 10px; }
+
+.btn-remove-in-game {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.btn-remove-in-game:hover {
+    background: #cc0000;
+}
+
+.teams-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
+.team-card { background: white; border-radius: 8px; padding: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.player-item { display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px; 
+    border-bottom: 1px solid #eee; 
+    font-size: 0.9rem; 
+    cursor: move; 
+    background: #fff;
+    margin-bottom: 2px; }
+.btn-lose { width: 100%; margin-top: 8px; background: #666; color: white; border: none; padding: 5px; border-radius: 4px; }

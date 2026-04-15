@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Futebol Master da Vila</title>
+    
+    <link rel="manifest" href="manifest.json">
+    
+    <meta name="theme-color" content="#004a99">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="ic_fmv.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="splash" class="screen active">
+        <p class="title-top">Sorteador de Jogadores</p>
+        <img src="ic_fmv_1.png" alt="Logo FMV" class="logo">
+        <p class="title-bottom">Futebol Master da Vila</p>
+    </div>
+
+    <div id="setup-screen" class="screen">
+        <div class="header-status">
+            <h2>Cadastrados: <span id="count">0</span></h2>
+        </div>
+        
+        <div class="input-group">
+            <input type="text" id="player-name" placeholder="Nome do Jogador">
+            <div class="positions">
+                
+                <label><input type="checkbox" id="pos-c"> C</label>
+            </div>
+            <button onclick="addPlayer()" class="btn-add">Adicionar Único</button>
+        </div>
+
+        <div class="import-area">
+            <textarea id="bulk-names" placeholder="Cole a lista aqui (nomes separados por vírgula ou linha)"></textarea>
+            <button onclick="importPlayers()" class="btn-import">Importar Lista Completa</button>
+        </div>
+
+        <div class="config">
+            <label>Jogadores por time:</label>
+            <select id="team-size">
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+
+        <ul id="player-list"></ul>
+
+        <button class="btn-draw" onclick="drawTeams()">SORTEAR TIMES</button>
+    </div>
+
+    <div id="teams-screen" class="screen">
+        <h2>Times Sorteados</h2>
+        <div id="teams-container" class="teams-grid"></div>
+        <div class="actions">
+            <button onclick="addLatePlayer()" class="btn-late">Incluir Jogador</button>
+            <button onclick="location.reload()" class="btn-reset">Novo Jogo</button>
+        </div>
+    </div>
+
+    <script src="script.js">
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+          .then(() => console.log("App Pronto para Uso Offline!"))
+          .catch(err => console.log("Erro ao registrar SW:", err));
+        }
+    </script>
+        
+</body>
+</html>

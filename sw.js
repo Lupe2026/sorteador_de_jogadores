@@ -5,7 +5,7 @@ const assets = [
   './style.css',
   './script.js',
   './manifest.json',
-  './ic_fmv.png',
+  './ic_fmv_1.png',
   './fundo_azul_amarelo.png'
 ];
 

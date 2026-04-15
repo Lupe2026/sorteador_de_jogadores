@@ -50,7 +50,7 @@ Este app foi desenvolvido como um **Progressive Web App (PWA)**. Para instalá-l
 * `script.js`: Toda a inteligência de sorteio e trocas.
 * `manifest.json`: Configurações de PWA.
 * `sw.js`: Service Worker para cache offline.
-* `ic_fmv.png`: Logo oficial.
+* `ic_fmv_1.png`: Logo oficial.
 * `fundo_azul_amarelo.png`: Fundo da tela Splash.
 
 ---

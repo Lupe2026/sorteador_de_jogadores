@@ -1,4 +1,4 @@
-const cacheName = 'futebol-v1.1';
+const cacheName = 'futebol-v1.2';
 const assets = [
   './',
   './index.html',
